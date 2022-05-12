@@ -1,0 +1,19 @@
+.header {
+  padding: 2.4rem 1.8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1f2028;
+}
+
+.headerActive {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+}
+
+.active {
+  display: block;
+}

@@ -1,0 +1,49 @@
+.desktopNavbar {
+  display: none;
+}
+
+.desktopNavbar ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.desktopNavbar li {
+  color: #aaa;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  margin: 1rem;
+  transition: all ease-in-out 300ms;
+}
+
+.desktopNavbar li:hover {
+  color: #fff;
+}
+
+.desktopNavbar li::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  transform: translate(-150%, 0);
+  transition: all ease-in-out 300ms;
+}
+
+.desktopNavbar li:hover::after {
+  transform: translate(0, 0);
+}
+
+.desktopNavbar a {
+  font-size: 1.2rem;
+}
+
+@media screen and (min-width: 600px) {
+  .desktopNavbar {
+    display: block;
+  }
+}
