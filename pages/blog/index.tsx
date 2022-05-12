@@ -1,5 +1,5 @@
 import { GetStaticProps, NextPage } from "next";
-import PostCard from "../../components/post-card/post-card";
+import PostList from "../../components/post-list/post-list";
 import { getAllPosts } from "../../utils/blogUtils";
 
 interface Props {
@@ -19,10 +19,8 @@ const BlogPage: NextPage<Props> = ({ posts }) => {
   return (
     <>
       <div className="container">
-        <h1>Blog Page</h1>
-        {posts.map((post) => (
-          <PostCard key={post.slug} post={post} />
-        ))}
+        {/* <h2>WebDev Blog</h2> */}
+        <PostList posts={posts} />
       </div>
     </>
   );

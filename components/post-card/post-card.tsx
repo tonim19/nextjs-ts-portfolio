@@ -35,9 +35,8 @@ const PostCard: React.FC<Props> = ({ post }) => {
           height={1100}
         />
       </div>
-      <div className="post-date">Posted on {post.frontmatter.date}</div>
-      <h3>{post.frontmatter.title}</h3>
-      <p>{post.frontmatter.excerpt}</p>
+      <p className={styles.date}>{post.frontmatter.date}</p>
+      <h3 className={styles.title}>{post.frontmatter.title}</h3>
     </article>
   );
 };

@@ -38,6 +38,25 @@ h6 {
   font-weight: inherit;
 }
 
+h2 {
+  text-align: center;
+  font-size: 1.7rem;
+  margin: 1rem 0 3rem 0;
+}
+
+h3 {
+  margin: 1rem 0;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+p {
+  margin: 1rem 0;
+  font-size: 1.4rem;
+  color: #aaa;
+}
+
 .container {
   width: 90%;
   max-width: 1300px;
