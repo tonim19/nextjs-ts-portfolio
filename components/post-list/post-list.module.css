@@ -1,8 +1,8 @@
 .posts {
   display: grid;
   grid-template-columns: minmax(300px, 1fr);
-  gap: 2rem;
-  margin: 0 auto;
+  gap: 1rem;
+  margin: 0 auto 4rem auto;
 }
 
 @media screen and (min-width: 600px) {

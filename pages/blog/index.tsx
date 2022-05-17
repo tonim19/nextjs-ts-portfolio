@@ -1,5 +1,6 @@
 import { GetStaticProps, NextPage } from "next";
 import PostList from "../../components/post-list/post-list";
+import Title from "../../components/title/title";
 import { getAllPosts } from "../../utils/blogUtils";
 
 interface Props {
@@ -17,12 +18,10 @@ interface Props {
 
 const BlogPage: NextPage<Props> = ({ posts }) => {
   return (
-    <>
-      <div className="container">
-        {/* <h2>WebDev Blog</h2> */}
-        <PostList posts={posts} />
-      </div>
-    </>
+    <div className="container">
+      <Title>Blog</Title>
+      <PostList posts={posts} />
+    </div>
   );
 };
 
