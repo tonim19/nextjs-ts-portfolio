@@ -1,0 +1,51 @@
+.btnLeft {
+  display: inline-block;
+  border-radius: 50%;
+  padding: 1rem;
+  font-size: 1.3rem;
+}
+
+.btnLeft::before {
+  border-radius: 50%;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 0;
+}
+
+.title {
+  font-size: 2.5rem;
+  margin: 1rem 0;
+}
+
+.postDate {
+  font-size: 1.1rem;
+  margin: 1rem 0;
+}
+
+.coverImage {
+  border-radius: 10px;
+}
+
+.postBody {
+  margin: 3rem 0;
+}
+
+.card ul {
+  display: block;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+.card ul li {
+  list-style: disc;
+}
+
+.card ol li {
+  list-style: decimal;
+}

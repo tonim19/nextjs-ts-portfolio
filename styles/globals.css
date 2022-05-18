@@ -89,9 +89,9 @@ p {
 }
 
 .container {
-  width: 90%;
+  width: 85%;
   max-width: 1300px;
-  margin: 9rem auto 5rem auto;
+  margin: 1rem auto 4rem auto;
 }
 
 .active {

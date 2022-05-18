@@ -1,8 +1,7 @@
 import { GetStaticPaths, GetStaticProps, GetStaticPropsContext } from "next";
-import Image from "next/image";
-import Link from "next/link";
+
 import { getPost, getSlugs } from "../../utils/blogUtils";
-import { marked } from "marked";
+import PostDetails from "../../components/post-details/post-details";
 
 interface Props {
   slug: string;
@@ -15,23 +14,10 @@ interface Props {
   content: string;
 }
 
-const PostPage: React.FC<Props> = ({
-  frontmatter: { title, date, cover_image },
-  content,
-}) => {
+const PostPage: React.FC<Props> = (props) => {
   return (
     <>
-      <Link href="/blog">
-        <button className="btn">Go Back</button>
-      </Link>
-      <div className="card">
-        <h1 className="post-title">{title}</h1>
-        <div className="post-date">Posted on {date}</div>
-        <Image src={cover_image} alt="Cover Image" width={300} height={200} />
-        <div className="post-body">
-          <div dangerouslySetInnerHTML={{ __html: marked(content) }}></div>
-        </div>
-      </div>
+      <PostDetails {...props} />
     </>
   );
 };

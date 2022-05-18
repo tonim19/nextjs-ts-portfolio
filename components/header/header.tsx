@@ -14,7 +14,10 @@ const Header: React.FC = () => {
   };
 
   return (
-    <header className={styles.header}>
+    <header
+      style={isActive ? { position: "fixed" } : { position: "relative" }}
+      className={styles.header}
+    >
       <Logo />
       <HamburgerMenu handleClick={handleClick} />
       {isActive && <MobileNavbar handleClick={handleClick} />}
