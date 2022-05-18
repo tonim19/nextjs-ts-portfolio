@@ -1,12 +1,20 @@
 .btnLeft {
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
   border-radius: 50%;
-  padding: 1rem;
+  width: 55px;
+  height: 55px;
   font-size: 1.3rem;
+  border: 2px solid #555;
+  color: #fff;
+  background-color: transparent;
+  transition: all ease-in-out 0.1s;
 }
 
-.btnLeft::before {
-  border-radius: 50%;
+.btnLeft:hover {
+  background-color: #303e45;
 }
 
 .card {
@@ -30,22 +38,28 @@
 }
 
 .postBody {
-  margin: 3rem 0;
+  margin: 3rem auto;
 }
 
-.card ul {
+.postBody ul {
   display: block;
 }
 
-.card img {
-  width: 100%;
-  height: auto;
+.postBody a {
+  color: rgb(53, 139, 205);
+  text-decoration: underline;
 }
 
-.card ul li {
+.postBody img {
+  width: auto;
+  height: auto;
+  margin: 1rem;
+}
+
+.postBody ul li {
   list-style: disc;
 }
 
-.card ol li {
+.postBody ol li {
   list-style: decimal;
 }

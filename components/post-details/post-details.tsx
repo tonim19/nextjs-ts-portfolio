@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import { marked } from "marked";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
+import remarkEmoji from "remark-emoji";
 
 import styles from "./post-details.module.css";
 
@@ -22,7 +24,7 @@ const PostDetails: React.FC<Props> = ({
   return (
     <>
       <Link href="/blog">
-        <button className={`btn ${styles.btnLeft}`}>&larr;</button>
+        <a className={styles.btnLeft}>&larr;</a>
       </Link>
       <div className={styles.card}>
         <h1 className={styles.title}>{title}</h1>
@@ -31,13 +33,15 @@ const PostDetails: React.FC<Props> = ({
           className={styles.coverImage}
           src={cover_image}
           alt="Cover Image"
-          width={500}
-          height={600}
-          objectFit="cover"
+          width={1200}
+          height={800}
+          objectFit="contain"
           layout="responsive"
         />
         <div className={styles.postBody}>
-          <div dangerouslySetInnerHTML={{ __html: marked(content) }}></div>
+          <ReactMarkdown remarkPlugins={[remarkGfm, remarkEmoji]}>
+            {content}
+          </ReactMarkdown>
         </div>
       </div>
     </>
