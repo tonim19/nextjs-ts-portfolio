@@ -18,10 +18,10 @@ interface Props {
 
 const BlogPage: NextPage<Props> = ({ posts }) => {
   return (
-    <div className="container">
+    <>
       <Title>Blog</Title>
       <PostList posts={posts} />
-    </div>
+    </>
   );
 };
 

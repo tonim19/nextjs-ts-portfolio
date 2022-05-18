@@ -20,9 +20,9 @@ const PostPage: React.FC<Props> = ({
   content,
 }) => {
   return (
-    <div className='container'>
+    <>
       <Link href="/blog">
-        <a className="btn">Go Back</a>
+        <button className="btn">Go Back</button>
       </Link>
       <div className="card">
         <h1 className="post-title">{title}</h1>
@@ -32,7 +32,7 @@ const PostPage: React.FC<Props> = ({
           <div dangerouslySetInnerHTML={{ __html: marked(content) }}></div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

@@ -2,9 +2,17 @@ import Link from "next/link";
 
 import styles from "./mobile-nav.module.css";
 
-const MobileNavbar: React.FC = () => {
+interface Props {
+  handleClick: () => void;
+}
+
+const MobileNavbar: React.FC<Props> = ({ handleClick }) => {
+  const clickHandler = () => {
+    handleClick();
+  };
+
   return (
-    <nav className={styles.navbar}>
+    <nav className={styles.navbar} onClick={clickHandler}>
       <ul>
         <li>
           <Link href="/">Home</Link>

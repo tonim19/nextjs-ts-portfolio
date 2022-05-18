@@ -8,18 +8,16 @@ import styles from "./header.module.css";
 
 const Header: React.FC = () => {
   const [isActive, setIsActive] = useState(false);
-  const headerRef = useRef<HTMLUListElement>(null);
 
   const handleClick = () => {
-    headerRef.current!.classList.toggle(styles.headerActive);
     setIsActive(!isActive);
   };
 
   return (
-    <header ref={headerRef} className={styles.header}>
+    <header className={styles.header}>
       <Logo />
       <HamburgerMenu handleClick={handleClick} />
-      {isActive && <MobileNavbar />}
+      {isActive && <MobileNavbar handleClick={handleClick} />}
       <DesktopNavbar />
     </header>
   );
