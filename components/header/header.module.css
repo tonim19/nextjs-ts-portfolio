@@ -11,6 +11,13 @@
   background-color: #1f2028;
 }
 
-.active {
-  display: block;
+.header ul {
+  padding: 0;
+  list-style: none;
+}
+
+.header a {
+  font-size: 1.2rem;
+  color: #fff;
+  text-decoration: none;
 }

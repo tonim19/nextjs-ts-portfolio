@@ -1,7 +1,8 @@
 import { GetStaticPaths, GetStaticProps, GetStaticPropsContext } from "next";
-
+import { serialize } from "next-mdx-remote/serialize";
 import { getPost, getSlugs } from "../../utils/blogUtils";
 import PostDetails from "../../components/post-details/post-details";
+import { MDXRemoteSerializeResult } from "next-mdx-remote";
 
 interface Props {
   slug: string;
@@ -11,7 +12,7 @@ interface Props {
     excerpt: string;
     cover_image: string;
   };
-  content: string;
+  source: MDXRemoteSerializeResult<Record<string, unknown>>;
 }
 
 const PostPage: React.FC<Props> = (props) => {
@@ -36,12 +37,13 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const { slug } = params as { slug: string };
   const { frontmatter, content } = getPost(slug);
+  const mdxSource = await serialize(content);
 
   return {
     props: {
       slug,
       frontmatter,
-      content,
+      source: mdxSource,
     },
   };
 };

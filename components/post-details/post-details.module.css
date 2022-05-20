@@ -9,6 +9,7 @@
   font-size: 1.3rem;
   border: 2px solid #555;
   color: #fff;
+  text-decoration: none;
   background-color: transparent;
   transition: all ease-in-out 0.1s;
 }
@@ -38,6 +39,7 @@
 }
 
 .postBody {
+  width: 100%;
   margin: 3rem auto;
 }
 
@@ -51,9 +53,18 @@
 }
 
 .postBody img {
-  width: auto;
-  height: auto;
+  max-width: 100%;
   margin: 1rem;
+}
+
+.postBody blockquote {
+  border-left: 3px solid #bbb;
+  margin-left: 1rem;
+  padding-left: 0.5rem;
+}
+
+.postBody li {
+  margin-left: 1rem;
 }
 
 .postBody ul li {

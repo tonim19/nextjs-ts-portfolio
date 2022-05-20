@@ -1,8 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import ReactMarkdown from "react-markdown";
-import remarkGfm from "remark-gfm";
-import remarkEmoji from "remark-emoji";
+import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
 
 import styles from "./post-details.module.css";
 
@@ -14,12 +12,12 @@ interface Props {
     excerpt: string;
     cover_image: string;
   };
-  content: string;
+  source: MDXRemoteSerializeResult<Record<string, unknown>>;
 }
 
 const PostDetails: React.FC<Props> = ({
   frontmatter: { title, date, cover_image },
-  content,
+  source,
 }) => {
   return (
     <>
@@ -39,9 +37,7 @@ const PostDetails: React.FC<Props> = ({
           layout="responsive"
         />
         <div className={styles.postBody}>
-          <ReactMarkdown remarkPlugins={[remarkGfm, remarkEmoji]}>
-            {content}
-          </ReactMarkdown>
+          <MDXRemote {...source} />
         </div>
       </div>
     </>

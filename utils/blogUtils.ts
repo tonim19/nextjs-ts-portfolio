@@ -10,12 +10,12 @@ export function getFiles() {
 
 export function getSlugs() {
   const files = getFiles();
-  const slugs = files.map((filename) => filename.replace(".md", ""));
+  const slugs = files.map((filename) => filename.replace(".mdx", ""));
   return slugs;
 }
 
 export function getPost(slug: string) {
-  const markdown = fs.readFileSync(path.join("posts", slug + ".md"), "utf-8");
+  const markdown = fs.readFileSync(path.join("posts", slug + ".mdx"), "utf-8");
   const { data, content } = matter(markdown);
   return { frontmatter: data, content };
 }
@@ -25,7 +25,7 @@ export function getAllPosts() {
 
   const posts = files
     .map((filename) => {
-      const slug = filename.replace(".md", "");
+      const slug = filename.replace(".mdx", "");
       const markdown = fs.readFileSync(path.join("posts", filename), "utf-8");
       const { data, content } = matter(markdown);
       return {
