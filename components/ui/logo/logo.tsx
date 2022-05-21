@@ -6,7 +6,7 @@ const Logo: React.FC = () => {
   return (
     <div className={styles.logo}>
       <Link href="/">
-        <h1>Toni Morovic</h1>
+        <h1>Toni Morović</h1>
       </Link>
     </div>
   );

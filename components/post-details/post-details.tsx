@@ -2,6 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
 
+import Syntax from "../syntax-component/syntax-component";
+
 import styles from "./post-details.module.css";
 
 interface Props {
@@ -37,7 +39,7 @@ const PostDetails: React.FC<Props> = ({
           layout="responsive"
         />
         <div className={styles.postBody}>
-          <MDXRemote {...source} />
+          <MDXRemote {...source} components={{ Syntax }} />
         </div>
       </div>
     </>
