@@ -1,3 +1,8 @@
+:root {
+  --bg-color: #0a0a28;
+  --bg-gray-color: #303e45;
+}
+
 *,
 *::before,
 *::after {
@@ -18,7 +23,7 @@ body {
   font-family: "Montserrat", sans-serif;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
-  background-color: #1f2028;
+  background-color: var(--bg-color);
   color: #fff;
 }
 
@@ -58,7 +63,7 @@ h6 {
   display: block;
   cursor: pointer;
   padding: 1rem 2rem;
-  background-color: #303e45;
+  background-color: var(--bg-gray-color);
   border: none;
   border-radius: 10px;
   color: #fff;

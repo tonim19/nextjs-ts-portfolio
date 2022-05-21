@@ -1,8 +1,11 @@
 import { GetStaticPaths, GetStaticProps, GetStaticPropsContext } from "next";
 import { serialize } from "next-mdx-remote/serialize";
 import { getPost, getSlugs } from "../../utils/blogUtils";
-import PostDetails from "../../components/post-details/post-details";
-import { MDXRemoteSerializeResult } from "next-mdx-remote";
+import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
+import Syntax from "../../components/syntax-component/syntax-component";
+import Image from "next/image";
+import Link from "next/link";
+import styles from "../../styles/post-details.module.css";
 
 interface Props {
   slug: string;
@@ -18,7 +21,27 @@ interface Props {
 const PostPage: React.FC<Props> = (props) => {
   return (
     <>
-      <PostDetails {...props} />
+      <Link href="/blog">
+        <a className={styles.btnLeft}>&larr;</a>
+      </Link>
+      <div className={styles.card}>
+        <h1 className={styles.title}>{props.frontmatter.title}</h1>
+        <div className={styles.postDate}>
+          Posted on {props.frontmatter.date}
+        </div>
+        <Image
+          className={styles.coverImage}
+          src={props.frontmatter.cover_image}
+          alt="Cover Image"
+          width={1200}
+          height={800}
+          objectFit="contain"
+          layout="responsive"
+        />
+        <div className={styles.postBody}>
+          <MDXRemote {...props.source} components={{ Syntax }} />
+        </div>
+      </div>
     </>
   );
 };

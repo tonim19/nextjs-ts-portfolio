@@ -1,11 +1,22 @@
 import type { NextPage } from "next";
-import Title from "../components/title/title";
+import Link from "next/link";
+
+import styles from "../styles/home-page.module.css";
 
 const HomePage: NextPage = () => {
   return (
-    <>
-      <Title>Welcome</Title>
-    </>
+    <div className={styles.home}>
+      <h3 className={styles.title}>Hey, I&apos;m Toni Morović</h3>
+      <p className={styles.description}>Frontend Web Developer</p>
+      <div className={styles.links}>
+        <Link href="/about">
+          <a className={styles.btn}>About Me</a>
+        </Link>
+        <Link href="/portfolio">
+          <a className={styles.btn}>Portfolio</a>
+        </Link>
+      </div>
+    </div>
   );
 };
 

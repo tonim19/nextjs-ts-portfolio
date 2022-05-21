@@ -1,0 +1,38 @@
+.home {
+  margin-top: 25vh;
+  margin-bottom: 30vh;
+}
+
+.title {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.description {
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.btn {
+  display: inline-block;
+  width: 8rem;
+  font-weight: 700;
+  text-align: center;
+  margin: 1rem 0.5rem;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  color: #fff;
+  background-color: transparent;
+  border: 2px solid #555;
+  transition: all ease-in-out 0.3s;
+}
+
+.btn:hover {
+  background-color: var(--bg-gray-color);
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

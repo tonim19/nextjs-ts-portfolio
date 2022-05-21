@@ -15,7 +15,7 @@
 }
 
 .btnLeft:hover {
-  background-color: #303e45;
+  background-color: var(--bg-gray-color);
 }
 
 .card {
@@ -64,5 +64,5 @@
 }
 
 .postBody code {
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
