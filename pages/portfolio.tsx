@@ -7,7 +7,7 @@ import styles from "../styles/portfolio-page.module.css";
 
 const PortfolioPage: NextPage = () => {
   return (
-    <>
+    <div className={styles.portfolioContainer}>
       <Title>Portfolio</Title>
       <section className={styles.projects}>
         <h3>Latest Projects</h3>
@@ -27,7 +27,7 @@ const PortfolioPage: NextPage = () => {
           </div>
         </Link>
       </section>
-    </>
+    </div>
   );
 };
 

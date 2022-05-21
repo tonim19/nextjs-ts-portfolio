@@ -92,12 +92,6 @@ h6 {
   border: 2px solid #20b5ff;
 }
 
-.container {
-  width: 85%;
-  max-width: 1300px;
-  margin: 0 auto;
-}
-
 .active {
   display: block;
 }

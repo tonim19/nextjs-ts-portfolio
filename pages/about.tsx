@@ -5,7 +5,7 @@ import styles from "../styles/about-page.module.css";
 
 const AboutPage: NextPage = () => {
   return (
-    <>
+    <div className={styles.aboutContainer}>
       <Title>About</Title>
       <section className={styles.about}>
         <h3>About Me</h3>
@@ -35,7 +35,7 @@ const AboutPage: NextPage = () => {
           <li>GIT</li>
         </ul>
       </section>
-    </>
+    </div>
   );
 };
 

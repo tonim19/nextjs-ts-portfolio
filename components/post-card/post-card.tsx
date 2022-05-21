@@ -29,7 +29,6 @@ const PostCard: React.FC<Props> = ({ post }) => {
         <Image
           src={post.frontmatter.cover_image}
           alt="post"
-          layout="responsive"
           objectFit="cover"
           width={800}
           height={1100}
