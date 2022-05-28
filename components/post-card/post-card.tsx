@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import { useRouter } from "next/router";
 
 import styles from "./post-card.module.css";
@@ -30,8 +29,8 @@ const PostCard: React.FC<Props> = ({ post }) => {
           src={post.frontmatter.cover_image}
           alt="post"
           objectFit="cover"
-          width={800}
-          height={1100}
+          width={480}
+          height={640}
         />
       </div>
       <div className={styles.description}>

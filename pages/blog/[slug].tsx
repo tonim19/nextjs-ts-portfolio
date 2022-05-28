@@ -29,17 +29,18 @@ const PostPage: React.FC<Props> = (props) => {
         <div className={styles.postDate}>
           Posted on {props.frontmatter.date}
         </div>
-        <Image
-          className={styles.coverImage}
-          src={props.frontmatter.cover_image}
-          alt="Cover Image"
-          width={1200}
-          height={800}
-          objectFit="contain"
-          layout="responsive"
-        />
+        <div className={styles.coverImage}>
+          <Image
+            src={props.frontmatter.cover_image}
+            alt="Cover Image"
+            width={2100}
+            height={1600}
+            objectFit="contain"
+            layout="responsive"
+          />
+        </div>
         <div className={styles.postBody}>
-          <MDXRemote {...props.source} components={{ Syntax }} />
+          <MDXRemote {...props.source} components={{ Syntax, Image }} />
         </div>
       </div>
     </div>

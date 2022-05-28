@@ -6,7 +6,7 @@ import styles from "../styles/home-page.module.css";
 const HomePage: NextPage = () => {
   return (
     <div className="container">
-      <h3 className={styles.title}>Hey, I&apos;m Toni Morović</h3>
+      <h2 className={styles.title}>Hey, I&apos;m Toni Morović</h2>
       <p className={styles.description}>Frontend Web Developer</p>
       <div className={styles.links}>
         <Link href="/about">

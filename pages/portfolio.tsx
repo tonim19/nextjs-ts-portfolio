@@ -21,6 +21,7 @@ const PortfolioPage: NextPage = () => {
                 objectFit="cover"
                 width={800}
                 height={800}
+                priority
               />
             </div>
             <h4>Ecommerce Site</h4>
