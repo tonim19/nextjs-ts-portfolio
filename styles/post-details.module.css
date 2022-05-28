@@ -1,4 +1,5 @@
 .btnLeft {
+  align-self: flex-start;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,6 +20,7 @@
 }
 
 .card {
+  width: 100%;
   display: flex;
   flex-direction: column;
   margin: 1rem 0;

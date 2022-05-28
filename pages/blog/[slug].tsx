@@ -20,7 +20,7 @@ interface Props {
 
 const PostPage: React.FC<Props> = (props) => {
   return (
-    <>
+    <div className="container">
       <Link href="/blog">
         <a className={styles.btnLeft}>&larr;</a>
       </Link>
@@ -42,7 +42,7 @@ const PostPage: React.FC<Props> = (props) => {
           <MDXRemote {...props.source} components={{ Syntax }} />
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

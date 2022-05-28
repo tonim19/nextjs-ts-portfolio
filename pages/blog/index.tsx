@@ -3,8 +3,6 @@ import PostList from "../../components/post-list/post-list";
 import Title from "../../components/title/title";
 import { getAllPosts } from "../../utils/blogUtils";
 
-import styles from "../../styles/blog-page.module.css";
-
 interface Props {
   posts: {
     slug: string;
@@ -20,7 +18,7 @@ interface Props {
 
 const BlogPage: NextPage<Props> = ({ posts }) => {
   return (
-    <div className={styles.blogContainer}>
+    <div className="container">
       <Title>Blog</Title>
       <PostList posts={posts} />
     </div>

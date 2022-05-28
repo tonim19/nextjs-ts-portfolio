@@ -58,6 +58,15 @@ h6 {
   isolation: isolate;
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 85vw;
+  margin: 2rem auto;
+}
+
 .btn {
   position: relative;
   display: block;

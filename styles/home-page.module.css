@@ -1,11 +1,3 @@
-.home {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
-}
-
 .title {
   font-size: 2rem;
   text-align: center;
